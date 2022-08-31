@@ -1,12 +1,13 @@
 <?php
-// 
 $link = mysqli_connect("localhost", "farid", "", "user");
-$id=$_GET["id"];
-$sql = "UPDATE user SET prenom='popo' WHERE id=$id";
-$results = mysqli_query($link, $sql);
-if ($results){
-    header('location: user.php?up=1');
+$id=$_POST["id"];
+$email = $_POST ["email"];
+$password = $_POST ["password"];
+$sql = "UPDATE user SET email='$email', password='$password'  WHERE id=$id";
+
+if (mysqli_query($link, $sql)){
+    header('location: users.php?up=1');
 }else{
-    header('location: user.php?up=0');
+    header('location: users.php?up=0');
 }
   ?>
