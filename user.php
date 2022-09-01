@@ -32,13 +32,13 @@ $row = mysqli_fetch_assoc($result);
   <h1 class="text-center text-white display-1"> <em> Modifier utilisateur </em></h1>
   <form class="form_user p-5" method="POST" action="up_user.php">
     <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-    <div class="form-group ">
-      <label class="text-white display-6" for="email">Email</label>
-      <input type="email" name="email" class="form-control" value="<?php echo htmlspecialchars($row["email"], ENT_QUOTES, 'UTF-8') ?>">
+    <div class="form-group d-flex justify-content-center">
+      <!-- <label class="text-white display-6" for="email">Email</label> -->
+      <input type="email" placeholder="votre e-mail" name="email" class="form-control-lg mb-3" value="<?php echo htmlspecialchars($row["email"], ENT_QUOTES, 'UTF-8') ?>">
     </div>
-    <div class="form-group ">
-      <label class="text-white display-6" for="password">Mot de passe</label>
-      <input type="password" name="password" class="form-control mb-3" value="<?php echo htmlspecialchars($row["password"], ENT_QUOTES, 'UTF-8') ?>">
+    <div class="form-group d-flex justify-content-center">
+      <!-- <label class="text-white display-6" for="password">Mot de passe</label> -->
+      <input type="password" name="password" class="form-control-lg " value="<?php echo htmlspecialchars($row["password"], ENT_QUOTES, 'UTF-8') ?>">
     </div>
     <div class="form-group d-flex justify-content-center m-3">
       <a href="users.php"><input type="button" value="Retour Liste" class="btn btn-primary m-2"></a>

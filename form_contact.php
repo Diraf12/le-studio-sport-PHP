@@ -1,26 +1,19 @@
-<?php 
-    $link =  mysqli_connect("localhost", "farid", "" , "user");
-    $sql = "SELECT id, nom, prenom, email message FROM `user`";
-    $results = mysqli_query($link, $sql);
-?>
-
 <?php  
-    $nom = $_POST["nom"];
-    $prenom = $_POST["prenom"];
+    $link =  mysqli_connect("localhost", "farid", "" , "user", 8889);
     $email = $_POST["email"];
-    $msg = $_POST["message"];
-    $link =  mysqli_connect("localhost", "farid", "" , "user");
-    if(empty($_POST["nom"]) || empty($_POST["prenom"]) || empty($_POST["email"]) 
-){
-        header("Location: ./contact.php?add=0");
-    }else {
-            $sql = "INSERT INTO user (nom, prenom, email, message) VALUES ('$nom', '$prenom', '$email', '$msg')";  
-            if (mysqli_query($link, $sql)) {
-                header("refresh:0; url=./contact.php?add=1");
-                exit();
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($link);
-            }
-    }
+    $password = $_POST["password"];
+    var_dump($password);
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    var_dump($password_hash);
+    $sql = "INSERT INTO user (email, password) VALUES ('$email', '$password_hash')";
+    if(!empty($email) && !empty($password)){
+        if (mysqli_query($link, $sql))
+        echo"c'est cool 👍";
+        //header("location: ./enregistrement.php?add=0");
+    }else { 
+        echo"c'est pas cool 👎";            
+                //header("location: ./enregistrement.php?add=1");                          
+           }
+    
     mysqli_close($link);
 ?>
