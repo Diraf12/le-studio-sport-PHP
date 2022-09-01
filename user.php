@@ -8,14 +8,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <title>user</title>
 </head>
-
 <body>
 
-
 </body>
-
 </html>
-
 <?php
 $link = mysqli_connect("localhost", "farid", "", "user");
 $id = $_GET["id"];
@@ -38,12 +34,11 @@ $row = mysqli_fetch_assoc($result);
     </div>
     <div class="form-group d-flex justify-content-center">
       <!-- <label class="text-white display-6" for="password">Mot de passe</label> -->
-      <input type="password" name="password" class="form-control-lg " value="<?php echo htmlspecialchars($row["password"], ENT_QUOTES, 'UTF-8') ?>">
+      <input type="password" placeholder="mot de passe" name="password" class="form-control-lg " value="<?php echo htmlspecialchars($row["password"], ENT_QUOTES, 'UTF-8') ?>">
     </div>
     <div class="form-group d-flex justify-content-center m-3">
       <a href="users.php"><input type="button" value="Retour Liste" class="btn btn-primary m-2"></a>
       <input type="submit" name="modifier" value="Modifier" class="btn btn-success m-2">
-
     </div>
   </form>
 </div>
