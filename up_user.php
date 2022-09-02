@@ -11,3 +11,4 @@ if (mysqli_query($link, $sql)){
     header('location: users.php?up=0');
 }
   ?>
+  
