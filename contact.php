@@ -1,6 +1,6 @@
 <?php $title = "contact"; ?>
 <?php require_once 'header.php'; ?> 
-<img class="img-back " src="../images/visuel/header-contact.jpg" alt="#">
+<img class="img-back" src="../images/visuel/header-contact.jpg" alt="#">
 <?php require_once 'barnav.php'; ?>
 <?php
 ob_start();

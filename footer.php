@@ -88,7 +88,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <!-- <script src="./js/main.js"></script> -->
+  <script src="./js/main.js"></script>
   <!-- fin -->
 </body>
 

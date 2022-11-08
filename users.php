@@ -15,7 +15,7 @@
   <body>
     <?php
     $link =  mysqli_connect("localhost", "farid", "", "user");
-    $sql = "SELECT id, nom, prenom, email, message FROM `user`";
+    $sql = "SELECT * FROM `user`";
     $results = mysqli_query($link, $sql);
     ?>
     <?php echo "<table border = '1px' class='table table-dark'>" ?>

@@ -305,7 +305,7 @@ h1 h2::after {
 }
 
 /* Media queries */
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
   .card-deck {
     flex-wrap: wrap;
   }
@@ -315,6 +315,7 @@ h1 h2::after {
   .img-back {
     width: 100%;
   }
+}
 
   /* burger */
   .burger {
@@ -431,20 +432,7 @@ h1 h2::after {
     max-width: 100%;
     background-size: cover;
   }
-}
 
-/* autre Media queries */
-@media screen and (max-width: 861px) {
-  .img-back {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .img-back {
-    width: 100%;
-  }
-}
 /* fin */
 /* fin des Media queries */
 
